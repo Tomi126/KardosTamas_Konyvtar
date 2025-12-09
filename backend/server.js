@@ -19,6 +19,18 @@ app.get("/", (req, res) => {
     res.send("Hello from the server!");
 });
 
+app.get("/konyvek", (req, res) => {
+    const sql = "SELECT konyv_id, cim, szerzo, mufaj_nev FROM konyv INNER JOIN mufaj ON konyv.mufaj_id = mufaj.mufaj_id;";
+    db.query(sql, (err, result) => {
+        if (err) {
+            console.error("Error fetching books:", err);
+            res.status(500).send("Error fetching books");
+        } else {
+            res.json(result);
+        }});
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
