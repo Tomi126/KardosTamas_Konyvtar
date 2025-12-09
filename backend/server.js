@@ -16,7 +16,7 @@ const db = mysql.createPool({
 });
 
 app.get("/", (req, res) => {
-    res.send("Hello from the server!");
+    res.send("Fut a backend.");
 });
 
 app.get("/konyvek", (req, res) => {
