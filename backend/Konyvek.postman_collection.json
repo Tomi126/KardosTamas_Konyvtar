@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "505ad26b-770e-463c-882d-3f029c503d3f",
+		"name": "Konyvek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41645711"
+	},
+	"item": [
+		{
+			"name": "ujkonyv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3001/ujkonyv"
+			},
+			"response": []
+		},
+		{
+			"name": "konyvek",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "konyvtorles",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3001/konyvtorles/1"
+			},
+			"response": []
+		}
+	]
+}
